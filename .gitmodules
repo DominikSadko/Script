@@ -1,0 +1,7 @@
+[submodule "Source/external/googletest"]
+	path = Source/external/googletest
+	url = https://github.com/google/googletest.git
+[submodule "Source/external/lua"]
+	path = Source/external/lua
+	url = https://github.com/LuaJIT/LuaJIT.git
+	ignore = dirty

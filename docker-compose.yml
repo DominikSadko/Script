@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  IdeQtCreator:
+    image: script-ide-qtcreator:latest
+    build:
+      context: .
+    working_dir: /home/developer/workspace/
+    command: >
+      sh -c "
+        /opt/qtcreator/bin/qtcreator;
+      "
+    environment:
+      - DISPLAY=${DISPLAY}
+      - DEBUGINFOD_URLS=https://debuginfod.archlinux.org
+    volumes:
+      - ./.cache/config/:/home/developer/.config
+      - ./.cache/build/:/home/developer/workspace/build/
+      - ./Source/:/home/developer/workspace/Source/
+      - /tmp/.X11-unix/:/tmp/.X11-unix/
+    ulimits:
+      nofile:
+        soft: 524288
+        hard: 524288

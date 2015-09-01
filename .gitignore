@@ -1,0 +1,6 @@
+.cache/*
+*.user
+!.gitignore
+!.clang-format
+!.clang-tidy
+build/

@@ -1,0 +1,47 @@
+---
+Checks:          
+'
+  bugprone-*,
+  clang-analyzer-*,
+  cppcoreguidelines-*,
+  google-*,
+  misc-*,
+  modernize-*,
+  readability-*,
+  -cppcoreguidelines-avoid-magic-numbers,
+  -cppcoreguidelines-avoid-const-or-ref-data-members,
+  -cppcoreguidelines-non-private-member-variables-in-classes,
+  -cppcoreguidelines-owning-memory,
+  -modernize-use-auto,
+  -modernize-make-*,
+  -modernize-use-default-member-init,
+  -modernize-use-trailing-return-type,
+  -performance-move-const-arg,
+  -readability-else-after-return,
+  -readability-named-parameter,
+  -readability-redundant-access-specifiers,
+  -readability-redundant-string-init
+  -readability-avoid-const-params-in-decls
+'
+WarningsAsErrors: ''
+HeaderFilterRegex: ''
+FormatStyle: 'file'
+CheckOptions:    
+  - key:             cppcoreguidelines-special-member-functions.AllowSoleDefaultDtor
+    value:           'true'
+  - key:             cppcoreguidelines-pro-type-member-init.UseAssignment
+    value:           'true'
+  - key:             readability-implicit-bool-conversion.AllowIntegerConditions
+    value:           'true'
+  - key:             readability-implicit-bool-conversion.AllowPointerConditions
+    value:           'true'
+  - key:             readability-qualified-auto.AddConstToQualified
+    value:           'true'
+  - key:             misc-non-private-member-variables-in-classes.IgnoreClassesWithAllMemberVariablesBeingPublic
+    value:           'true'
+  - key:             readability-identifier-length.IgnoredVariableNames
+    value:           '(id|ts|it|db|hp|L)'
+  - key:             readability-identifier-length.IgnoredParameterNames
+    value:           '(id|ts|os|db|hp|L)'
+...
+
